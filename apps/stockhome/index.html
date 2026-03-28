@@ -26,13 +26,18 @@
     .section p, .section li { font-size: 15px; color: #d4a0a0; line-height: 1.7; }
     .section ul { list-style: none; padding: 0; }
     .section ul li::before { content: "・"; }
-    .stores { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
-    .stores a {
-      color: #f5c6c6; text-decoration: none; font-size: 14px;
-      padding: 10px 24px; border: 1px solid rgba(245,198,198,0.3);
-      border-radius: 8px; transition: background 0.2s;
+    .stores { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 24px; justify-content: center; }
+    .store-badge {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #000; color: #fff; text-decoration: none;
+      padding: 10px 20px; border-radius: 10px;
+      border: 1px solid #333; transition: opacity 0.2s;
     }
-    .stores a:hover { background: rgba(255,255,255,0.1); }
+    .store-badge:hover { opacity: 0.85; }
+    .store-badge .icon { font-size: 28px; line-height: 1; }
+    .store-badge .text { text-align: left; }
+    .store-badge .text small { font-size: 10px; display: block; color: #ccc; }
+    .store-badge .text span { font-size: 16px; font-weight: 600; }
   </style>
 </head>
 <body>
@@ -63,8 +68,14 @@
     </div>
 
     <div class="stores">
-      <!-- <a href="#">App Store</a> -->
-      <!-- <a href="#">Google Play</a> -->
+      <a href="#" class="store-badge">
+        <div class="icon"></div>
+        <div class="text"><small>Download on the</small><span>App Store</span></div>
+      </a>
+      <a href="#" class="store-badge">
+        <div class="icon">▶</div>
+        <div class="text"><small>GET IT ON</small><span>Google Play</span></div>
+      </a>
     </div>
   </div>
 </body>
